@@ -5,6 +5,7 @@ import Welcome from './components/Welcome';
 import Hello from './components/Hello';
 import Message from './components/Message';
 import Counter from './components/Counter';
+import Functionclick from './components/Functionclick';
 
 
 
@@ -14,6 +15,7 @@ function App() {
     <div className="App"> 
     <Counter></Counter>
       <Message></Message>
+      <Functionclick></Functionclick>
       {/* <Greet></Greet>
       <Welcome></Welcome> */}
       {/* <Hello name="sd" superName = "g">
