@@ -4,17 +4,14 @@ export interface GreetProp {
     isLoggedin: boolean
 }
 export interface PersonProps {
-    name:{
-        first: string,
-        last: string
-    }
+
+        firstName: string,
+        lastName: string
+        
 }
 
 export interface PersonListProps {
-    names:{
-        first: string,
-        last: string
-    }[]
+    names:PersonPropse[]
 }
 
 export interface StatusProps {
@@ -27,4 +24,9 @@ export interface HeadingProps {
 
 export interface  OscarProps {
     children: React.ReactNode
+}
+export interface PersonPropse {
+    firstName: string
+    lastName: string
+    id: string
 }

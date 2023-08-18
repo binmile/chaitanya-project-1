@@ -13,13 +13,12 @@ function App() {
   return (
     <div className="App">
       <Greet name='Chaitan' messageCount={1} isLoggedin={true}></Greet>
-      <Person name = {personName}></Person>
-      <PersonList names = {nameList}/>
+      <Person firstName={personName.firstName}lastName={personName.lastName}></Person>      <PersonList names = {nameList}/>
       <Status status='success'/>
       <Heading>Placeholder text</Heading>
       <Oscar>
         <Heading>
-        Oscar goes to Leonardo Dicaprio!
+                 Oscar goes to Leonardo Dicaprio!
         </Heading>
       </Oscar>
     </div>
