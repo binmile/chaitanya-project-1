@@ -16,3 +16,15 @@ export interface PersonListProps {
         last: string
     }[]
 }
+
+export interface StatusProps {
+    status: 'loading' | 'success' | 'error'
+}
+
+export interface HeadingProps {
+    children:string
+}
+
+export interface  OscarProps {
+    children: React.ReactNode
+}
