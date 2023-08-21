@@ -4,7 +4,7 @@ export interface GreetProp {
     messageCount: number,
     isLoggedin: boolean
 }
-export interface PersonProps{
+export interface PersonProps  {
 
         firstName: string,
         lastName: string

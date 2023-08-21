@@ -12,6 +12,7 @@ import { Button } from './components/Button';
 import { Input } from './components/Input';
 import { useState } from 'react';
 import { Container } from './components/Container';
+import LifecycleA from './components/LifecycleA';
 
 function App() {
   const [value, setValue] = useState("");  // setvalue is not a variable it is a function
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <div className="App">
+      <LifecycleA/>
       <Container styles={{border: '1px solid black', padding: '1 rem'}}/>
       <Button handleClick={(event,id) => {
         console.log('Button Clicked', event)
