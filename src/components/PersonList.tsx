@@ -2,10 +2,10 @@ import React from 'react'
 import { PersonListProps,PersonPropse } from './type'
 
 // export const PersonList:React.FC<PersonListProps>= (props) => {
-  export const PersonList:React.FC<PersonListProps>= (props:PersonListProps) => {
+  export const PersonList:React.FC<PersonListProps>= ({names}) => {
   return (
     <div>
-        {props.names.map(({firstName,id,lastName}: PersonPropse) => {
+        {names.map(({firstName,id,lastName}: PersonPropse) => {
           return (
             <h2 key={id} >{firstName}{lastName}</h2>
           )

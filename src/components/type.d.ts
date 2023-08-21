@@ -1,3 +1,4 @@
+import { emit } from "process"
 
 export interface GreetProp {
     name: string,
@@ -44,4 +45,9 @@ export interface InputProps {
 // styles
 export interface ContainerProps {
     styles: React.CSSProperties
+}
+
+export interface AuthUser  {
+    name:string,
+    email: string,
 }
