@@ -1,18 +1,26 @@
 import React, { Component } from 'react';
 import './App.css';
-import {personName} from "./components/DummyData";
-import { nameList } from './components/DummyData';
-import { Greet } from './components/Greet';
-import { Person } from './components/Person';
-import { PersonList } from './components/PersonList';
-import { Status } from './components/Status';
-import { Heading } from './components/Heading';
-import { Oscar } from './components/Oscar';
-import { Button } from './components/Button';
-import { Input } from './components/Input';
+import {personName} from "./component/DummyData";
+import { nameList } from './component/DummyData';
+import { Greet } from './component/Greet';
+import { Person } from './component/Person';
+import { PersonList } from './component/PersonList';
+import { Status } from './component/Status';
+import { Heading } from './component/Heading';
+import { Oscar } from './component/Oscar';
+import { Button } from './component/Button';
+import { Input } from './component/Input';
 import { useState } from 'react';
-import { Container } from './components/Container';
-import LifecycleA from './components/LifecycleA';
+import { Container } from './component/Container';
+import LifecycleA from './component/LifecycleA';
+import  HookCounter from './component/HookCounter';
+import HookCounter2 from './component/HookCounter2';
+import HookCounterThree from './component/HookCounterThree';
+import HookCounter4 from './component/HookCounter4';
+import HookCounterOne from './component/HookCounterOne';
+import HookMouse from './component/HookMouse';
+import MouseContainer from './component/MouseContainer';
+import IntervalHookCounter from './component/IntervalHookCounter';
 
 function App() {
   const [value, setValue] = useState("");  // setvalue is not a variable it is a function
@@ -23,8 +31,15 @@ function App() {
 
   return (
     <div className="App">
+      <IntervalHookCounter/>
+      <MouseContainer/>
+      <HookCounterOne></HookCounterOne>
+      <HookCounter4/>
+      <HookCounterThree></HookCounterThree>
+      <HookCounter2></HookCounter2>
+      <HookCounter></HookCounter>
       <LifecycleA/>
-      <Container styles={{border: '1px solid black', padding: '1 rem'}}/>
+      <Container styles={{border: '1px solid black', padding: '1 rem', backgroundColor:'#2e5d78'}}/>
       <Button handleClick={(event,id) => {
         console.log('Button Clicked', event)
       }}/>

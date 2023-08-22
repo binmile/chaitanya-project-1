@@ -51,3 +51,9 @@ export interface AuthUser  {
     name:string,
     email: string,
 }
+
+export interface arrayCounterState {
+    id:number,
+    value:number
+
+}
