@@ -35,12 +35,19 @@ import { UserDetails } from './component/UserDetails';
 import { Admin } from './component/Admin';
 import { Profile } from './component/Profile';
 import { Login } from './component/Login';
+import ComponentC from './component/ComponentC';
 const LazyAbout = React.lazy(() => import("./component/HookCounter2"))
+
+export const UserContext = React.createContext('chaitan')
+export const ChannelContext = React.createContext("react")
+
 function App() {
   const [value, setValue] = useState("");  // setvalue is not a variable it is a function
   const handleChange = (event:React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
   }
+
+  const val:string= 'chaitan';
 
 
   return (
@@ -50,6 +57,11 @@ function App() {
       <Routes>
         <Route path='/' element={
           <div>
+              <UserContext.Provider value={val}>
+                <ChannelContext.Provider value={'reactcontext'}>
+                  <ComponentC/>
+                </ChannelContext.Provider>
+              </UserContext.Provider>
               <IntervalHookCounter/>
                 <MouseContainer/>
                 <HookCounterOne></HookCounterOne>
