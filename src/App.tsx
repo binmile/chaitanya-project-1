@@ -36,6 +36,9 @@ import { Admin } from './component/Admin';
 import { Profile } from './component/Profile';
 import { Login } from './component/Login';
 import ComponentC from './component/ComponentC';
+import RefsMemo from './component/RefsMemo';
+import CounterThree from './component/CounterThree';
+import CounterMain from './component/CounterMain';
 const LazyAbout = React.lazy(() => import("./component/HookCounter2"))
 
 export const UserContext = React.createContext('chaitan')
@@ -108,7 +111,14 @@ function App() {
           <Route path='admin' element={<Admin/>} />
         </Route>
         <Route path='profile' element={<Profile/>} />
-        <Route path='login' element={<Login/>} />
+        <Route path='login' element={
+        <div>
+
+          <Login/>
+          <RefsMemo/>      
+        </div>
+      } />
+      <Route path='reducer' element={<CounterMain/>}/>
         
         <Route path='*' element={<Nomatch/>}></Route>
       </Routes>
