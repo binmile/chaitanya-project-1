@@ -20,6 +20,7 @@ export const Navbar = () => {
         <NavLink style={navLinkStyles} to='/products'>Products</NavLink>
         <NavLink style={navLinkStyles} to='/profile'>Profile</NavLink>
         <NavLink style={navLinkStyles} to='/reducer'>Reducer</NavLink>
+        <NavLink style={navLinkStyles} to='/redux'>Redux</NavLink>
         
 
         {/* {

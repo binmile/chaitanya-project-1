@@ -39,12 +39,18 @@ import ComponentC from './component/ComponentC';
 import RefsMemo from './component/RefsMemo';
 import CounterThree from './component/CounterThree';
 import CounterMain from './component/CounterMain';
+import {increment, decrement} from './redux/slices/counter/index'
+import { useAppDispatch, useAppSelector } from './redux/hooks';
 const LazyAbout = React.lazy(() => import("./component/HookCounter2"))
 
 export const UserContext = React.createContext('chaitan')
 export const ChannelContext = React.createContext("react")
 
 function App() {
+
+  const count = useAppSelector(state => state.counter)
+  const dispatch = useAppDispatch()
+
   const [value, setValue] = useState("");  // setvalue is not a variable it is a function
   const handleChange = (event:React.ChangeEvent<HTMLInputElement>) => {
     setValue(event.target.value);
@@ -119,6 +125,14 @@ function App() {
         </div>
       } />
       <Route path='reducer' element={<CounterMain/>}/>
+      <Route path='redux' element={
+        <div>
+          <h1>count is {count}</h1>
+          <button onClick={()=>dispatch(increment())}>Increment</button>
+          <button onClick={()=>dispatch(decrement())}>Decrement</button>
+
+        </div>
+      }/>
         
         <Route path='*' element={<Nomatch/>}></Route>
       </Routes>
